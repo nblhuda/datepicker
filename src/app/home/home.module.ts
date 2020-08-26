@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
+
 
 
 @NgModule({
@@ -14,6 +16,14 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
+  
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+  constructor(
+    private datePicker: DatePicker
+  ) {}
+  myDate:string;
+    myTime:string;
+    myDateNTime:string;
+}

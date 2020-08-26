@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Blank
+      Ionic 4 Native Date Time Picker
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+<h1>Date & Time Pickers</h1>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="showDatepicker()">
+    Show Date Picker
+  </ion-button>
+  <h4>Date: {{myDate}}</h4>
+
+  <ion-button (click)="showTimepicker()">
+    Show Time Picker
+  </ion-button>
+  <h4>Time: {{myTime}}</h4>
+
+
+  <ion-button (click)="showDateTimepicker()">
+    Show Date & Time Picker
+  </ion-button>
+  <h4>Date & Time: {{myDateNTime}}</h4>
+
 </ion-content>
